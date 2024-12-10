@@ -5,6 +5,7 @@ import Logo from "./components/Logo";
 import Form from "./components/Form";
 import PackingList from "./components/PackingList";
 import { useState } from "react";
+import Stats from "./components/Stats";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -40,6 +41,7 @@ export default function App() {
         handleDeleteItem={handleDeleteItem}
         handleClearList={handleClearList}
       />
+      <Stats data={data} />
     </div>
   );
 }
