@@ -6,16 +6,16 @@ import { useState } from "react";
 
 export default function Form({ handleAddItem }) {
   const [quantity, setQuatity] = useState(1);
-  const [descripton, setDescription] = useState("");
+  const [description, setDescription] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (!descripton) return;
+    if (!description) return;
 
     const newItem = {
       id: Date.now(),
-      descripton,
+      description,
       quantity,
       packed: false,
     };
@@ -41,7 +41,7 @@ export default function Form({ handleAddItem }) {
       <input
         type="text"
         placeholder="Item..."
-        value={descripton}
+        value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
       <button>Add</button>
